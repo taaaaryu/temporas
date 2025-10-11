@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Temporas | Takopa Chronicles</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- 外部CSS（※ファイル名は style.css に統一） -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="history-page">
   <header class="site-header history-header" id="top">
-    <nav class="nav">
+    <nav class="nav" aria-label="メインメニュー">
       <a class="brand" href="index.html">Temporas</a>
-      <button class="nav-toggle" aria-label="メニューを開く">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="secondary-navigation">
+        <span></span><span></span><span></span>
       </button>
-      <ul class="nav-list">
+      <ul id="secondary-navigation" class="nav-list">
         <li><a href="index.html#home">Top Page</a></li>
         <li><a href="#chronicle">Chronicle</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
     <div class="hero history-hero">
       <div class="hero-copy">
         <p class="eyebrow">Takoyaki Party Archives</p>
@@ -42,6 +46,7 @@
   </header>
 
   <main>
+    <!-- Timeline -->
     <section id="chronicle" class="section chronicle">
       <div class="section-heading">
         <h2 class="section-title">Takopa Timeline</h2>
@@ -80,75 +85,4 @@
         </article>
         <article class="chronicle-card">
           <time datetime="2025-08">2025 Autumn</time>
-          <h3>流しそうめん祭</h3>
-          <p>第77回東北大学祭に向け、流しそうめんマシンで頭を冷やしながら冷静にセトリを決めました。</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="gallery" class="section gallery">
-      <div class="section-heading">
-        <h2 class="section-title">Takopa Gallery</h2>
-        <p>Temporasの7つの歴史を写真で切り取りました。クリックすると大きく表示されます。</p>
-      </div>
-      <div class="gallery-grid" role="list">
-        <button class="gallery-card" type="button" role="listitem" data-lightbox-trigger data-lightbox-src="assets/images/takopa-1.png" data-lightbox-text="2019 初陣タコパ" data-lightbox-alt="紙皿に盛られたたこ焼き">
-          <img src="assets/temporas_food_1.jpg" alt="紙皿に盛られたたこ焼き" loading="lazy">
-          <span>2023 Winter</span>
-        </button>
-        <button class="gallery-card" type="button" role="listitem" data-lightbox-trigger data-lightbox-src="assets/images/takopa-2.png" data-lightbox-text="2023 ピザ四重奏" data-lightbox-alt="テーブルに並んだ4枚のピザ">
-          <img src="assets/temporas_food_2.jpg" alt="テーブルに並んだ4枚のピザ" loading="lazy">
-          <span>2023 Spring</span>
-        </button>
-        <button class="gallery-card" type="button" role="listitem" data-lightbox-trigger data-lightbox-src="assets/images/takopa-3.png" data-lightbox-text="2023 スパイス合宿" data-lightbox-alt="2皿のカレーとナン">
-          <img src="assets/temporas_food_3.jpg" alt="2皿のカレーとナン" loading="lazy">
-          <span>2023 Winter</span>
-        </button>
-        <button class="gallery-card" type="button" role="listitem" data-lightbox-trigger data-lightbox-src="assets/images/takopa-4.png" data-lightbox-text="2024 火鍋サミット" data-lightbox-alt="具材がたっぷり入った火鍋">
-          <img src="assets/temporas_food_4.jpg" alt="具材がたっぷり入った火鍋" loading="lazy">
-          <span>2024 Winter</span>
-        </button>
-        <button class="gallery-card" type="button" role="listitem" data-lightbox-trigger data-lightbox-src="assets/images/takopa-5.png" data-lightbox-text="2024 Monzya" data-lightbox-alt="卓上鍋で煮込むラーメン">
-          <img src="assets/temporas_food_5.jpg" alt="卓上鍋で煮込むラーメン" loading="lazy">
-          <span>2024 Spring</span>
-        </button>
-        <button class="gallery-card" type="button" role="listitem" data-lightbox-trigger data-lightbox-src="assets/images/takopa-6.png" data-lightbox-text="2024 送別会" data-lightbox-alt="暗い背景に浮かぶ花束">
-          <img src="assets/temporas_food_6.jpg" alt="暗い背景に浮かぶ花束" loading="lazy">
-          <span>2025 Summer</span>
-        </button>
-        <button class="gallery-card" type="button" role="listitem" data-lightbox-trigger data-lightbox-src="assets/images/takopa-7.png" data-lightbox-text="2025 流しそうめん祭" data-lightbox-alt="流しそうめん機と薬味">
-          <img src="assets/temporas_food_7.jpg" alt="流しそうめん機と薬味" loading="lazy">
-          <span>2025 Autumn</span>
-        </button>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact contact-alt">
-      <div class="contact-card">
-        <h2 class="section-title">コラボタコパのご相談</h2>
-        <p>Temporasとの合同タコパや出演のご相談は、メールにてお気軽にお問い合わせください。</p>
-        <a class="contact-link" href="mailto:booking@temporas.jp">booking@temporas.jp</a>
-        <div class="social-links">
-          <a href="https://instagram.com" aria-label="Instagram">Instagram</a>
-          <a href="https://twitter.com" aria-label="Twitter">X / Twitter</a>
-          <a href="https://youtube.com" aria-label="YouTube">YouTube</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2025 Temporas Collective. Crafted with swing &amp; octopus vibes.</p>
-  </footer>
-
-  <div class="lightbox" data-lightbox hidden aria-hidden="true" role="dialog" aria-label="写真の拡大表示">
-    <div class="lightbox-inner">
-      <button class="lightbox-close" type="button" aria-label="閉じる" data-lightbox-close>&times;</button>
-      <img src="" alt="" data-lightbox-image>
-      <p data-lightbox-caption></p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+          <h3>流しそ
