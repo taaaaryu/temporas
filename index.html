@@ -1,105 +1,195 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temporas - Jazz Ensemble</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temporas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* 最低限の保険。サイトCSSにあるなら不要です */
+    html { scroll-behavior: smooth; }
+    .nav-toggle { background: transparent; border: 0; cursor: pointer; }
+    .nav.open .nav-list { display: block; }
+  </style>
 </head>
 <body>
-  <!-- ヘッダー -->
-  <header class="site-header">
-    <nav class="nav">
-      <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
+  <header class="site-header" id="home">
+    <nav class="nav" aria-label="メインメニュー">
+      <a class="brand" href="#home">Temporas</a>
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="primary-navigation" class="nav-list">
+        <li><a href="#vision">Vision</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#members">Members</a></li>
-        <li><a href="#music">Music</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="achievements.html">Takopa Chronicle</a></li>
         <li><a href="#schedule">Schedule</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="hero" id="home">
-      <h1 class="hero-title">Temporas</h1>
-      <p class="hero-subtitle">A Five-piece Jazz Ensemble</p>
+
+    <div class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Neo Jazz &amp; Gospel-inspired Collective</p>
+        <h1>Jazz that remembers the past and rewrites tomorrow.</h1>
+        <p class="lead">青葉山を拠点に活動するTemporas。電子音と男女ツインボーカルが溶け合う、懐かしさと新しさのクロスオーバー・サウンドをお届けします。</p>
+        <div class="hero-actions">
+          <a class="cta" href="#music">Latest Soundscape</a>
+          <a class="cta ghost" href="achievements.html">Takopa Chronicle</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+        <div class="staff-lines"></div>
+      </div>
     </div>
   </header>
 
-  <!-- About -->
-  <section id="about" class="section about">
-    <h2>About</h2>
-    <p>Temporasは洋楽テイストを取り入れた落ち着いたジャズバンドです。心地よいグルーヴと繊細なハーモニーをお楽しみください。</p>
-  </section>
+  <main>
+    <!-- Vision -->
+    <section id="vision" class="section vision">
+      <h2 class="section-title">Vision</h2>
+      <p>ゴスペルの熱とジャズの自由、そして電子の煌めき。Temporasは「懐かしさ」と「未来」を一つのグルーヴで結び、明日の耳をアップデートします。</p>
+    </section>
 
-  <!-- Members -->
-  <section id="members" class="section members">
-    <h2>Members</h2>
-    <div class="member-list">
-      <div class="member-item">
-        <img src="images/member1.jpg" alt="Member 1">
-        <h3>Member Name 1</h3>
-        <p>Role / Instrument</p>
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="section-heading">
+        <h2 class="section-title">About the Collective</h2>
+        <p></p>
       </div>
-      <div class="member-item">
-        <img src="images/member2.jpg" alt="Member 2">
-        <h3>Member Name 2</h3>
-        <p>Role / Instrument</p>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Temporasは、青葉山を活動拠点とする5人組バンド。ドラム、ギター、シンセサイザーに男女ツインボーカルを掛け合わせ、ゴスペル仕込みの厚みと電子音の煌めきをミックスしながら、“懐かしいのに新しい”洋楽テイストのサウンドを磨いています。</p>
+        </div>
+        <ul class="about-highlights" aria-label="バンドの特徴">
+          <li><span>05</span> people weaving one groove</li>
+          <li><span>02</span> voices in brilliant counterpoint</li>
+          <li><span>∞</span> blends of nostalgia &amp; future beats</li>
+        </ul>
       </div>
-      <div class="member-item">
-        <img src="images/member3.jpg" alt="Member 3">
-        <h3>Member Name 3</h3>
-        <p>Role / Instrument</p>
-      </div>
-      <div class="member-item">
-        <img src="images/member4.jpg" alt="Member 4">
-        <h3>Member Name 4</h3>
-        <p>Role / Instrument</p>
-      </div>
-      <div class="member-item">
-        <img src="images/member5.jpg" alt="Member 5">
-        <h3>Member Name 5</h3>
-        <p>Role / Instrument</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Music -->
-  <section id="music" class="section music">
-    <h2>Music</h2>
-    <div class="track-list">
-      <!-- ここにSoundCloudやYouTube埋め込み -->
-      <div class="track-item">
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" 
-                src="https://w.soundcloud.com/player/?url=YOUR_TRACK_URL"></iframe>
+    <!-- Members（IDは一意に） -->
+    <section id="members" class="section members">
+      <h2 class="section-title">Members</h2>
+      <div class="member-list">
+        <article class="member-card">
+          <div class="member-avatar" aria-hidden="true">Vo</div>
+          <h3>MayaMii</h3>
+          <p>Lead Vocal</p>
+        </article>
+        <article class="member-card">
+          <div class="member-avatar" aria-hidden="true">Gt</div>
+          <h3>Eda</h3>
+          <p>Guitar</p>
+        </article>
+        <article class="member-card">
+          <div class="member-avatar" aria-hidden="true">Syn</div>
+          <h3>Tsukasa</h3>
+          <p>Synthesizer</p>
+        </article>
+        <article class="member-card">
+          <div class="member-avatar" aria-hidden="true">Dr</div>
+          <h3>Atae</h3>
+          <p>Drums / Groove Director</p>
+        </article>
+        <article class="member-card">
+          <div class="member-avatar" aria-hidden="true">Vo</div>
+          <h3>Taru</h3>
+          <p>Vocal / Percussion</p>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Schedule -->
-  <section id="schedule" class="section schedule">
-    <h2>Schedule</h2>
-    <ul>
-      <li>2025/08/15 – Tokyo Jazz Festival – Venue Name</li>
-      <li>2025/09/10 – Live at Club XYZ – Tokyo</li>
-      <!-- 追加公演情報 -->
-    </ul>
-  </section>
+    <!-- Music -->
+    <section id="music" class="section music">
+      <h2 class="section-title">Music</h2>
+      <div class="track-list">
+        <!-- ※実際のSoundCloudトラックURLに差し替えてください -->
+        <div class="track-item">
+          <iframe title="Temporas on SoundCloud" width="100%" height="166" scrolling="no" frameborder="no"
+            src="https://w.soundcloud.com/player/?url=REPLACE_WITH_YOUR_TRACK_URL">
+          </iframe>
+        </div>
+      </div>
+      <p class="streaming-note">より深いサウンドは大学祭ステージ、または配信アーカイブにて。</p>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact">
-    <h2>Contact</h2>
-    <p>Booking：<a href="mailto:booking@temporas.jp">booking@temporas.jp</a></p>
-    <p>Social：
-      <a href="#">Facebook</a> |
-      <a href="#">Instagram</a> |
-      <a href="#">Twitter</a>
-    </p>
-  </section>
+    <!-- News -->
+    <section id="news" class="section news">
+      <div class="section-heading">
+        <h2 class="section-title">News</h2>
+        <p>最新のお知らせや出演情報をピックアップしてお届けします。</p>
+      </div>
+      <ul class="news-feed" aria-label="Temporasのニュース">
+        <li class="news-item">
+          <div class="news-meta">
+            <span class="news-label">出演決定</span>
+            <time datetime="2024-11">2024 Autumn</time>
+          </div>
+          <h3>第77回東北大学祭 メインステージに登場</h3>
+          <p>Temporasは第77回東北大学祭に出演します。朝の川内の空気に溶け込むジャズ・エレクトロニカの響きを、ぜひ現地で体験してください。</p>
+          <a class="news-link" href="https://www.festa-tohoku.org/77/?page_id=2691" target="_blank" rel="noopener noreferrer">関連ページで詳細を見る</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Schedule -->
+    <section id="schedule" class="section schedule">
+      <h2 class="section-title">Live Schedule</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <time datetime="2025-10-26">2025.10.26</time>
+          <div>
+            <h3>大学祭ステージ</h3>
+            <p>野外ステージ / 9:00 ~ 9:20 (AM)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="contact-card">
+        <h2 class="section-title">Stay in Tempo</h2>
+        <p>出演依頼・コラボレーション・取材は下記までお気軽にご連絡ください。</p>
+        <a class="contact-link" href="mailto:booking@temporas.jp">booking@temporas.jp</a>
+        <div class="social-links">
+          <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+          <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- フッター -->
   <footer class="site-footer">
-    <p>&copy; 2025 Temporas. All Rights Reserved.</p>
+    <p>&copy; 2025 Temporas Collective. Crafted with swing &amp; pixels.</p>
   </footer>
+
+  <!-- 小さなナビ用スクリプト -->
+  <script>
+    (function () {
+      const nav = document.querySelector('.nav');
+      const btn = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('primary-navigation');
+
+      btn?.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+        // メニュー開閉時にフォーカス移動が必要ならここで制御
+      });
+    })();
+  </script>
 </body>
 </html>
